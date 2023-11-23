@@ -234,7 +234,7 @@ export const contacts = [
         platform: "Email",
         info: "danaremar@alum.us.es",
         icon: "bi bi-envelope",
-        link: "danaremar@alum.us.es"
+        link: "mailto:danaremar@alum.us.es"
     },
     {
         platform: "GitHub",
