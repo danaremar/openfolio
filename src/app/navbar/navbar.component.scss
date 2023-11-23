@@ -1,0 +1,31 @@
+@media (max-width: 767px) {
+    .navbar {
+        position: absolute !important; 
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        display: none !important;
+    }
+}
+
+.navbar {
+    position: fixed !important;
+    width: 100vw;
+    backdrop-filter: blur(1rem);
+    background-color: var(--navbar-color);
+    box-shadow: 0 5px 5px rgba(176, 176, 176, 0.05);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    z-index: 1;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+img.logo {
+    // width: 35px !important;
+    padding: 0px;
+}

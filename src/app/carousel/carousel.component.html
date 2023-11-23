@@ -1,0 +1,25 @@
+@if (images.length>1) {
+<div id="carousel{{id}}" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        @for (i of images; track $index) {
+        <div class="carousel-item {{$index==0?'active':''}}">
+            <img src="./assets/{{i}}" class="d-block w-100" alt="..." loading="lazy">
+        </div>
+        }
+    </div>
+    <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel'+id" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel'+id" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+}
+@else if(images.length==1) {
+<div class="mt-2 mb-4">
+    <img class="product-img me-3" src="assets/{{images[0]}}" alt="product logo" loading="lazy">
+</div>
+}

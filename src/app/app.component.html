@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="all-screen home-container py-auto d-flex">
+
+  <!-- @if (profile.homeVideo.length>1) {
+  <video id="homeVideo" loop autoplay> -->
+    <!-- @for (v of profile.homeVideo; track $index) {
+    <source src="assets/{{v.src}}" type="video/{{v.type}}">
+    } -->
+    <!-- <source src="assets/office.webm" type="video/webm"> -->
+    <!-- <source src="assets/office.mp4" type="video/mp4">
+  </video>
+  } -->
+
+  <div class="container my-auto">
+    @if (features.home) {
+    <app-section path="home" name="About me" [showName]="false">
+      <app-home></app-home>
+    </app-section>
+    }
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    @if (features.qualification) {
+    <app-section path="qualification" name="Qualification" class="col-lg-6">
+      <app-qualification></app-qualification>
+    </app-section>
+    }
+    @if (features.experience) {
+    <app-section path="experience" name="Experience" class="col-lg-6">
+      <app-experience></app-experience>
+    </app-section>
+    }
+    @if (features.skills) {
+    <app-section path="skills" name="Skills">
+      <app-skills></app-skills>
+    </app-section>
+    }
+    @if (features.products) {
+    <app-section path="products" name="Products">
+      <app-products></app-products>
+    </app-section>
+    }
+    @if (features.services) {
+    <app-section path="services" name="Services">
+      <app-services></app-services>
+    </app-section>
+    }
+  </div>
+</div>
+
+@if (features.contact) {
+<div class="contact-container py-5 d-flex">
+  <!-- <div class="container px-3 pt-4 card my-auto"> -->
+  <div class="px-3 pt-4 card m-auto">
+    <app-section path="contact" name="Contact me" class="card-body" [addMarginTop]="false">
+      <app-contact></app-contact>
+    </app-section>
+  </div>
+</div>
+}

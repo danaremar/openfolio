@@ -1,0 +1,16 @@
+<ul class="timeline ms-3">
+    <li class="timeline-item mb-5" *ngFor="let e of experience">
+        <div class="fw-bold fs-5 mb-1">{{e.title}}</div>
+        @if (e.starts) {
+        <p class="text-muted mb-1 fw-semibold">{{e.starts + " - " + (e.ends?e.ends:"Actual")}}</p>
+        }
+        @if (e.company) {
+        <p class="text-muted mb-2 fw-bold fst-italic">{{e.company}}</p>
+        }
+        @if (e.knowledge && e.knowledge.length>0) {
+        <ul>
+            <li *ngFor="let k of e.knowledge">{{k}}</li>
+        </ul>
+        }
+    </li>
+</ul>

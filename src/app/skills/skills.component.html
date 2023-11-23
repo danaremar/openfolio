@@ -1,0 +1,39 @@
+<!-- SOFT-SKILLS -->
+<div class="row mt-5 mb-4 mx-2">
+    @for (s of softskills; track $index) {
+    <div class="col-xl-3 col-md-4 col-6 d-flex flex-column">
+        <div class="card card-effect mb-4 mx-3 flex-grow-1">
+            <div class="d-flex flex-column align-items-center card-body">
+                <i class="{{s.icon}} fs-2 mt-auto mb-2 text-muted"></i>
+                <div class="text-center fs-5 mb-auto text-muted">{{s.name}}</div>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+<!-- TECHNICAL-SKILLS -->
+<div class="row">
+    @for (s of skills; track $index) {
+    <div class="col-xl-4 col-md-6 px-5 mb-5">
+        <div class="text-center mb-4 fs-4 fw-semibold">
+            {{s.group}}
+        </div>
+        @for (i of s.stack; track $index) {
+        <div class="d-flex mb-1">
+            <div class="text-muted fw-semibold my-auto">{{i.name}}</div>
+            @if (i.link) {
+            <a [href]="i.link" class="ms-auto text-muted" role="button" aria-label="skill link" target="_blank">
+                <i class="bi bi-link-45deg fs-4"></i>
+            </a>
+            }
+        </div>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-important" role="progressbar" [style]="'width: ' + i.percentage  + '%'"
+                aria-valuemin="0" aria-valuemax="100" title="progressbar-description">
+            </div>
+        </div>
+        }
+    </div>
+    }
+</div>

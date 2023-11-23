@@ -1,0 +1,39 @@
+// OTHERS
+
+textarea {
+    border-radius: 1rem;
+}
+
+input {
+    border-radius: 0px 50px 50px 0px;
+    
+}
+
+span {
+    border-radius: 50px 0 0 50px;
+}
+
+textarea {
+    height: 9rem;
+}
+
+.contact-img {
+    max-width: 25rem;
+    width: 25vw;
+    min-width: 15rem;
+}
+
+.card {
+    border-radius: 5rem;
+}
+
+.card-body {
+    padding: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+// input, span, textarea, .card {
+//     border-color: rgb(211, 211, 211);
+//     background-color: rgba(255, 255, 255, 0.3) !important;
+// }

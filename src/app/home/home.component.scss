@@ -1,0 +1,85 @@
+.user-img {
+    height: 250px !important;
+    width: 250px !important;
+    border-radius: 50rem;
+}
+
+@media (max-width: 350px) {
+    .user-img {
+        height: 150px !important;
+        width: 150px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .user-img {
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .user-img {
+        height: 350px !important;
+        width: 350px !important;
+    }
+}
+
+.contact-icon {
+    text-decoration: none;
+    transition: ease 0.2s;
+    color: var(--color-secundary) !important;
+}
+
+:host-context([data-bs-theme="dark"]) {
+    .contact-icon:hover {
+        color: white !important;
+    }
+}
+
+.contact-icon:hover {
+    color: black !important;
+}
+
+
+button>a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.wave-emoji {
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-name: wave;
+    display: inline-block !important;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(-10deg);
+    }
+
+    20% {
+        transform: rotate(12deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    40% {
+        transform: rotate(9deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

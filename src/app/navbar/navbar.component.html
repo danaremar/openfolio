@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg position-lg-absolute">
+  <div class="container-fluid">
+    <img class="logo me-3" src="assets/logo.svg" alt="profile logo" width="35px" height="35px" loading="lazy">
+    <a class="navbar-brand" href="#">Daniel Arellano</a>
+    <i title="Change theme" class="bi bi-theme ms-auto me-3 fs-5" role="button" (click)="switchTheme()"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        @if (features.home) {
+        <li class="nav-item">
+          <a class="nav-link" href="#">About me</a>
+        </li>
+        }
+        @if (features.qualification) {
+        <li class="nav-item">
+          <a class="nav-link" href="#qualification">Qualification</a>
+        </li>
+        }
+        @if (features.experience) {
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        }
+        @if (features.skills) {
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        }
+        @if (features.products) {
+        <li class="nav-item">
+          <a class="nav-link" href="#products">Products</a>
+        </li>
+        }
+        @if (features.services) {
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        }
+        @if (features.contact) {
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact me</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

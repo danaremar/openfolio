@@ -1,0 +1,8 @@
+<ul class="timeline ms-3">
+    <li class="timeline-item mb-5" *ngFor="let q of qualifications">
+        <div class="fw-bold fs-5 mb-1">{{q.title}}</div>
+        <p class="text-muted mb-1 fw-semibold" *ngIf="q.starts">{{q.starts + (q.ends?" - " + q.ends:"")}}</p>
+        <p class="text-muted mb-2 fw-bold fst-italic" *ngIf="q.location">{{q.location}}</p>
+        <p class="text-muted" *ngIf="q.text">{{q.text}}</p>
+    </li>
+</ul>

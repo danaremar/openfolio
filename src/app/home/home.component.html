@@ -1,0 +1,57 @@
+<div class="row mb-5" style="min-height: 30rem;">
+    <div class="col-lg-4 py-3 d-flex">
+        <picture class="d-flex m-auto">
+            <source srcset="assets/profile.avif" type="image/avif">
+            <source srcset="assets/profile.jpg" type="image/png">
+            <img class="user-img m-auto" src="assets/profile.jpg" alt="profile photo" height="100%" width="100%">
+        </picture>
+        <!-- <img class="user-img m-auto" src="assets/profile.jpg" alt="profile photo"> -->
+    </div>
+    <div class="col-lg-8 d-flex">
+        <div class="my-auto ms-3">
+
+            <!-- NAME -->
+            <div class="d-flex fs-1 flex-wrap">
+                <div class="fw-bold mt-auto me-2">Hi! I'm</div>
+                <div class="fw-bold color-important me-3">{{profile.name}}</div>
+
+                @if (profile.shakeHand) {
+                <span class="wave-emoji d-flex">
+                    <img alt="👋" draggable="false" class="mb-2"
+                        src="assets/hand.svg"
+                        style="height: 1em;">
+                </span>
+                }
+
+            </div>
+
+            <!-- ROLES -->
+            @if (profile.role.length==1) {
+            <div class="fs-3 fw-bold fst-italic color-secundary">{{profile.role[0]}}</div>
+            }
+            @else if (profile.role.length>1) {
+            <app-typed-text [list]="profile.role" class="fs-3 fw-bold fst-italic color-secundary"></app-typed-text>
+            }
+            <div class="fs-5 mt-3 mb-3" *ngIf="profile.description">{{profile.description}}</div>
+
+            <!-- FAST CONTACTS -->
+            @if (profile.fastContacts && contacts.length>1) {
+            <div class="d-flex mb-3">
+                @for (c of contacts; track $index) {
+                <a class="contact-icon" href="{{c.link}}" aria-label="contact link" target="_blank" >
+                    <i class="{{c.icon}} fs-3 me-4"></i>
+                </a>
+                }
+            </div>
+            }
+
+            <!-- CONTACT ME BUTTON -->
+            <button class="btn btn-primary">
+                <a href="#contact">
+                    Contact me
+                    <i class="bi bi-send ms-1"></i>
+                </a>
+            </button>
+        </div>
+    </div>
+</div>

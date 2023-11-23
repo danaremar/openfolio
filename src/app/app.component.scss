@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+
+    .all-screen,
+    #homeVideo {
+        height: 100vh !important;
+    }
+}
+
+.home-container {
+    background: var(--linear-grad);
+    height: 100vh;
+    min-height: var(--minimum-size-home);
+}
+
+// #homeVideo {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: var(--minimum-size-home);
+//     object-fit: cover;
+//     z-index: -1;
+// }
+
+.contact-container {
+    background-image: var(--linear-grad), url("../assets/contact-light.avif"), url("../assets/contact-light.jpg");
+    height: 100vh;
+    z-index: 0;
+}
+
+:host-context([data-bs-theme="dark"]) .contact-container {
+    background-image: var(--linear-grad), url("../assets/contact-dark.avif"), url("../assets/contact-dark.jpg");
+}

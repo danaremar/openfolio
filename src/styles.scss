@@ -1,0 +1,133 @@
+:root {
+    --minimum-size-home: 600px;
+    --color-important: #227bff;
+    --color-secundary: #45505B;
+    --color-tag: rgb(117, 117, 117);
+    --navbar-color: rgba(255, 255, 255, 0.2);
+    --linear-grad: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    --semi-transparent: rgba(255, 255, 255, 0.1);
+    --stars-color: rgb(167, 167, 167);
+}
+
+@media (max-width: 575px) {
+    :root {
+        --minimum-size-home: 1000px;
+    }
+}
+
+
+// LIGHT THEME ICON
+
+.bi-theme::before {
+    content: "\f1d2" !important;
+}
+
+[data-bs-theme=dark] {
+    --linear-grad: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    --semi-transparent: rgba(0, 0, 0, 0.1);
+    --navbar-color: rgba(122, 122, 122, 0.2);
+    --color-secundary: rgb(117, 117, 117);
+    --bs-body-bg: #0f0f0f !important;
+
+    // DARK THEME ICON
+    .bi-theme::before {
+        content: "\f496" !important;
+    }
+}
+
+.color-important {
+    color: var(--color-important);
+}
+
+.color-secundary {
+    color: var(--color-secundary);
+}
+
+.bg-important {
+    background-color: var(--color-important) !important;
+}
+
+// TIMELINE
+
+.timeline {
+    border-left: 1px solid hsl(0, 0%, 90%);
+    padding: -10px !important;
+    position: relative;
+    list-style: none;
+}
+
+.timeline .timeline-item {
+    position: relative;
+}
+
+.timeline .timeline-item:after {
+    position: absolute;
+    display: block;
+    background-color: hsl(0, 0%, 73%);
+    left: -38px;
+    top: 0.70rem;
+    border-radius: 50%;
+    height: 11px;
+    width: 11px;
+    content: "";
+}
+
+// PROGRESS
+
+.progress .progress-bar {
+    border-radius: 50rem;
+}
+
+// CARDS
+
+.card {
+    border-radius: 1rem !important;
+    backdrop-filter: blur(2rem);
+    background-color: var(--semi-transparent) !important;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+}
+
+.card-no-shadow {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+}
+
+.card-effect {
+    transition: all 0.2s ease;
+}
+
+.card-effect:hover {
+    transform: scale(1.05);
+}
+
+// CHIPS
+
+.tag-chip {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-right: 0.6rem;
+    padding: 5px 10px;
+    color: white;
+    background-color: var(--color-tag);
+    border-radius: 5rem;
+}
+
+// OTHERS
+
+button {
+    border-radius: 50rem !important;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+#homeVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: var(--minimum-size-home);
+    object-fit: cover;
+    z-index: -1;
+}
