@@ -7,9 +7,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "i18n:init": "ngx-translate-extract --input ./src --output ./src/assets/langs/i18n/template.json --key-as-default-value --replace --format json",
-    "i18n:extract": "ngx-translate-extract --input ./src --output ./src/assets/langs/i18n/{en,da,de,fi,nb,nl,sv}.json --clean --format json"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -34,7 +32,6 @@
     "@angular-devkit/build-angular": "^17.0.1",
     "@angular/cli": "~17.0.1",
     "@angular/compiler-cli": "^17.0.3",
-    "@biesbjerg/ngx-translate-extract": "^7.0.4",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",

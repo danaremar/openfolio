@@ -1,5 +1,5 @@
 export const languages = {
-    default: "es",
+    default: "en",
     list: ["es", "en"],
     showFlag: true,
     showText: true,
