@@ -1,18 +1,18 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from 'src/app/theme.service';
-import { features } from 'src/assets/config';
+import { GenericComponent } from '../generic.component';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent extends GenericComponent implements OnInit {
 
-  features = features
-
-  constructor(private themeService: ThemeService, private renderer: Renderer2) {
-
+  constructor(private themeService: ThemeService, private renderer: Renderer2, translate: TranslateService, configService: ConfigService) {
+    super(translate, configService)
   }
 
   ngOnInit(): void {

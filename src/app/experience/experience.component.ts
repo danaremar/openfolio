@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { experience } from 'src/assets/config';
+import { GenericComponent } from '../generic.component';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent {
-
-  experience = experience
+export class ExperienceComponent extends GenericComponent {
 
 }

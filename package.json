@@ -1,12 +1,15 @@
 {
   "name": "danaremar",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "i18n:init": "ngx-translate-extract --input ./src --output ./src/assets/langs/i18n/template.json --key-as-default-value --replace --format json",
+    "i18n:extract": "ngx-translate-extract --input ./src --output ./src/assets/langs/i18n/{en,da,de,fi,nb,nl,sv}.json --clean --format json"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +21,8 @@
     "@angular/platform-browser": "^17.0.3",
     "@angular/platform-browser-dynamic": "^17.0.3",
     "@angular/router": "^17.0.3",
+    "@ngx-translate/core": "^15.0.0",
+    "@ngx-translate/http-loader": "^8.0.0",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.1",
     "rxjs": "~7.8.0",
@@ -29,6 +34,7 @@
     "@angular-devkit/build-angular": "^17.0.1",
     "@angular/cli": "~17.0.1",
     "@angular/compiler-cli": "^17.0.3",
+    "@biesbjerg/ngx-translate-extract": "^7.0.4",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",

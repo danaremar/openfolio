@@ -15,6 +15,13 @@ import { HomeComponent } from './home/home.component';
 import { SectionComponent } from './section/section.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TypedTextComponent } from './typed-text/typed-text.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/langs/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -30,11 +37,20 @@ import { TypedTextComponent } from './typed-text/typed-text.component';
     HomeComponent,
     SectionComponent,
     CarouselComponent,
-    TypedTextComponent
+    TypedTextComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

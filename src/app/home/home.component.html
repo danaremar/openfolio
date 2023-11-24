@@ -12,7 +12,7 @@
 
             <!-- NAME -->
             <div class="d-flex fs-1 flex-wrap">
-                <div class="fw-bold mt-auto me-2">Hi! I'm</div>
+                <div class="fw-bold mt-auto me-2">{{"HI" | translate }}</div>
                 <div class="fw-bold color-important me-3">{{profile.name}}</div>
 
                 @if (profile.shakeHand) {
@@ -48,7 +48,7 @@
             <!-- CONTACT ME BUTTON -->
             <button class="btn btn-primary">
                 <a href="#contact">
-                    Contact me
+                    {{'CONTACTME' | translate}}
                     <i class="bi bi-send ms-1"></i>
                 </a>
             </button>

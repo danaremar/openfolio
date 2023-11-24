@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { services } from 'src/assets/config';
+import { GenericComponent } from '../generic.component';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent {
-
-  services = services
+export class ServicesComponent extends GenericComponent {
 
 }

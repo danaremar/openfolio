@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import Typed from 'typed.js';
 
@@ -7,7 +7,7 @@ import Typed from 'typed.js';
   templateUrl: './typed-text.component.html',
   styleUrl: './typed-text.component.scss'
 })
-export class TypedTextComponent implements AfterViewInit {
+export class TypedTextComponent implements AfterViewInit, OnChanges {
 
   @Input()
   list: Array<string> = []
@@ -27,7 +27,20 @@ export class TypedTextComponent implements AfterViewInit {
   @Input()
   smartBackspace: boolean = true
 
+  typed: Typed | undefined;
+
   ngAfterViewInit(): void {
+    this.build()
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.build()
+  }
+
+  build() {
+    if (this.typed) {
+      this.typed.destroy();
+    }
     const options = {
       strings: this.list,
       typeSpeed: this.typeSpeed,
@@ -35,8 +48,7 @@ export class TypedTextComponent implements AfterViewInit {
       backDelay: this.delay,
       // fadeOut: true,
     };
-
-    const typed = new Typed('#typedText', options);
+    this.typed = new Typed('#typedText', options);
   }
 
 }

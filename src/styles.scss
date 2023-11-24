@@ -121,6 +121,11 @@ section {
     scroll-margin-top: 100px;
 }
 
+.dropdown-toggle::after {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+
 #homeVideo {
     position: absolute;
     top: 0;

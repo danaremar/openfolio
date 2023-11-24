@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { profile, qualifications } from 'src/assets/config';
+import { GenericComponent } from '../generic.component';
 
 @Component({
   selector: 'app-qualification',
   templateUrl: './qualification.component.html',
   styleUrls: ['./qualification.component.scss']
 })
-export class QualificationComponent {
-
-  qualifications = qualifications
+export class QualificationComponent extends GenericComponent {
 
 }

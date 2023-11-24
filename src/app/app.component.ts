@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { features, profile } from 'src/assets/config';
+import { TranslateService } from '@ngx-translate/core';
+import { features } from 'src/assets/config';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,6 @@ export class AppComponent {
   title = 'danaremar';
 
   features = features
-  profile = profile
+
+  constructor(public translate: TranslateService) { }
 }
