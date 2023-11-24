@@ -97,7 +97,7 @@ export const skills = [
             {
                 name: "Java + Spring Boot + Gradle/Maven",
                 percentage: 90,
-                link: "https://github.com/danaremar/agix/tree/develop/webflux"
+                link: "https://github.com/danaremar/manapi/tree/develop/webflux"
             },
             {
                 name: "Angular + Bootstrap + HTML + Typescript",
@@ -116,7 +116,7 @@ export const skills = [
             {
                 name: "Docker",
                 percentage: 60,
-                link: "https://github.com/danaremar/agix/tree/develop"
+                link: "https://github.com/danaremar/manapi/tree/develop"
             },
             {
                 name: "Kubernetes",
@@ -125,12 +125,12 @@ export const skills = [
             {
                 name: "SQL (MariaDB, MySQL, Oracle, MS Server)",
                 percentage: 70,
-                link: "https://github.com/danaremar/agix/tree/develop/webflux"
+                link: "https://github.com/danaremar/manapi/tree/develop/webflux"
             },
             {
                 name: "MongoDB",
                 percentage: 70,
-                link: "https://github.com/danaremar/agix/tree/develop/webflux"
+                link: "https://github.com/danaremar/manapi/tree/develop/webflux"
             },
         ]
     },
