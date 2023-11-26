@@ -1,8 +1,12 @@
 # Openfolio
 
-This is an **open-source portfolio** that you can personalize by making changes to **just one file**. It simply requires compilation, a change to the typescript config file, and the addition of desired photos, videos, and documents. It is simple to use and setup.
+This is an **open-source portfolio** that you can personalize **fast, easy & realiable**. It simply requires compilation, some changes in typescript config files, and the addition of desired photos, videos, and documents. Simple to use & setup!
 
 Angular v17, Bootstrap v5.3, and Bootstrap Icons v1.11 were used in its design.
+
+### [Example website](https://danaremar.github.io/openfolio/)
+
+<br>
 
 ## Install dependencies
 Requires [**NodeJS**](https://nodejs.org/en/download/current) installed on the environment. Use the following command in the terminal to install all dependencies (on Windows, use cmd to avoid PowerShell restrictions):
@@ -10,6 +14,8 @@ Requires [**NodeJS**](https://nodejs.org/en/download/current) installed on the e
     npm install
 
 Install process will take 1-5 minutes.
+
+<br>
 
 ## Customize
 
@@ -58,11 +64,34 @@ Use framework icons or in some cases SVG files, avoid images. In config.ts refer
 ---
 
 ### config.ts
-Everything needed to develop the portfolio is contained in this file. Located in *`src/assets`*, contains multiple configurations for each feature:
+Includes main configurations of the portfolio without language. Located in *`src/assets`*, contains:
 
- - **features**: enable/disable features.
+- **languages**: configure languages.
 
-	   export const features  = {
+	> *defafult*: default lang when user enters into portfolio.
+
+	> *list*: all avaliable languages. Translations must be present in *`{lang}.json`* files.
+
+	> *showFlag*: language selector show language flag icon
+
+	> *showText*: language selector show language text
+
+	> *showDropdown*: enable dropdown or row view for language selector
+
+	> *multiLanguage*: enable multiple languages. If you want only 1 language, you can select this property to false and select the required language in *default* property
+
+		export const languages = {
+			default:  "en",
+			list: ["es", "en"],
+			showFlag:  true,
+			showText:  true,
+			showDropdown:  true,
+			multiLanguage:  true
+		}
+
+ - **features**: enable/disable selected features
+
+		export const features  = {
 			home:  true,
 			qualification:  true,
 			experience:  true,
@@ -71,80 +100,6 @@ Everything needed to develop the portfolio is contained in this file. Located in
 			services:  false,
 			contact:  true
 		}
-
- - **profile**: contains info about name, role, description & homeVideo (with multiple sources/media formats).
-	> *shakeHand*: enable hand moving effect
-	
-	> *fastContacts*: enable show icons with the contacts
-	
-		export const profile  = {
-			name:  "Name Surname", 
-			role: [
-				"Software Developer",
-				"Designer",
-				...
-			],
-			shakeHand:  true,
-			fastContacts: true,
-			description:  "I am a passionate software developer with a focus on crafting innovative web solutions..."
-		}
-
-- **qualifications**: contains info about studies & certifications.
-
-		export const qualifications  = [
-			{
-				title:  "Software Engineer Degree",
-				starts:  "October 2018",
-				ends:  "July 2022",
-				location:  "University of Madrid",
-				text:  "If you wanna tell the contains"
-			},
-			...
-		]
-
-- **experience**: contains info about working experience & commercial relationships.
-
-		export const experience  = [
-			{
-				title:  "Software Developer",
-				company:  "Google",
-				starts:  "August 2020",
-				ends:  "Actual",
-				knowledge: [
-					"Java development",
-					...
-				]
-			},
-			...
-		]
-
-- **skills**: all technical skills grouped by role.
-
-		export  const  skills  = [
-			{
-				group:  "Software Engineer",
-				stack: [
-					{
-						name:  "Java",
-						percentage:  90,
-						link:  "https://github.com/..."
-					},
-				]
-			},
-			...
-		]
-
-- **softskills**: personal attributes that enable someone to interact effectively with others.
-
-	> *icon*: refers framework classes ([Bootstrap Icons](https://icons.getbootstrap.com/) by default)
-
-		export const softskills  = [
-			{
-				name:  "Teamwork",
-				icon:  "bi bi-people"
-			},
-			...
-		]
 
 - **contacts**:  phone, mail, messenger, telegram, GitHub, Instagram...
 
@@ -166,6 +121,85 @@ Everything needed to develop the portfolio is contained in this file. Located in
 			...
 		]
 
+---
+
+### config.{lang}.ts
+Configutation files for each language. It's located in *`src/assets/langs`* with the HTML translation files *`{lang}.json`*.
+
+ - **profile**: contains info about name, role, description & homeVideo (with multiple sources/media formats).
+	> *shakeHand*: enable hand moving effect
+	
+	> *fastContacts*: enable show icons with the contacts
+	
+		profile: {
+			name:  "Name Surname", 
+			role: [
+				"Software Developer",
+				"Designer",
+				...
+			],
+			shakeHand:  true,
+			fastContacts: true,
+			description:  "I am a passionate software developer with a focus on crafting innovative web solutions..."
+		}
+
+- **qualifications**: contains info about studies & certifications.
+
+		qualifications: [
+			{
+				title:  "Software Engineer Degree",
+				starts:  "October 2018",
+				ends:  "July 2022",
+				location:  "University of Madrid",
+				text:  "If you wanna tell the contains"
+			},
+			...
+		]
+
+- **experience**: contains info about working experience & commercial relationships.
+
+		experience: [
+			{
+				title:  "Software Developer",
+				company:  "Google",
+				starts:  "August 2020",
+				ends:  "Actual",
+				knowledge: [
+					"Java development",
+					...
+				]
+			},
+			...
+		]
+
+- **skills**: all technical skills grouped by role.
+
+		skills: [
+			{
+				group:  "Software Engineer",
+				stack: [
+					{
+						name:  "Java",
+						percentage:  90,
+						link:  "https://github.com/..."
+					},
+				]
+			},
+			...
+		]
+
+- **softskills**: personal attributes that enable someone to interact effectively with others.
+
+	> *icon*: refers framework classes ([Bootstrap Icons](https://icons.getbootstrap.com/) by default)
+
+		softskills: [
+			{
+				name:  "Teamwork",
+				icon:  "bi bi-people"
+			},
+			...
+		]
+
 - **products**: created products that you want to show.
 
 	> *images*: showed in carousel
@@ -176,7 +210,7 @@ Everything needed to develop the portfolio is contained in this file. Located in
 
 	> *link*: refers to website
 
-		export  const  products  = [
+		products: [
 			{
 				name: "Openfolio",
 				description: [
@@ -202,8 +236,30 @@ Everything needed to develop the portfolio is contained in this file. Located in
 			...
 		]
 
+- **services**: all services or products that you offer.
 
+		services: [
+			{
+				name: "Portfolio",
+				description: "Introducing a personalized portfolio, personal website, or CV that showcases the best of you. From personal details to skills and services, all presented in a top-notch, responsive design. Make your online presence impeccable and attractive—because you deserve to stand out!",
+				tags: ["web","Openfolio", ...],
+				images: [
+					"products/portfolio/01.jpg",
+					...
+				],
+				pricing: [
+					{
+						name: "Basic",
+						description: "2 services + 4 products",
+						price: "75€"
+					},
+					...
+				]
+			},
+			...
+		]
 
+<br>
 
 ## Build in local
 Requires all dependencies installed & execute this command:
@@ -211,6 +267,8 @@ Requires all dependencies installed & execute this command:
 	npm s --o
 
 Build process will take 5-10 seconds.
+
+<br>
 
 ## Deploy on github pages
 Just execute ***`gh-pages.cmd`*** in your GitHub repository (in local, doesn't matter the branch) or the following git commands:
@@ -223,6 +281,8 @@ This script creates new branch called *gh-pages* which contains only your compil
 
 Deploy process will take 1-5 minutes.
 
+<br>
+
 ## Lighthouse
 Lighthouse is a browser addon that helps you improve the quality of your web pages. 
 The punctuation of the original Openfolio used in the GitHub page is:
@@ -234,10 +294,14 @@ The punctuation of the original Openfolio used in the GitHub page is:
 
 ![Openfolio punctuation in Lighthouse](https://i.ibb.co/w4crtXZ/image-2023-11-20-21-36-54.png)
 
+<br>
+
 ## License  
 The software is governed by the **GPLv3.0** license, signifying its commitment to an open-source approach. This license grants users the freedom to view, modify, and distribute the source code, fostering collaboration and community-driven development.
 
-## Authors
-If you want to participate in the creation of this product, do not hesitate to contact us.
+<br>
 
-- Daniel Arellano Martínez ([LinkedIn](https://www.linkedin.com/in/danielarellano99/)) :3
+## Authors
+If you want to participate in the creation of this product, do not hesitate to contact me:
+
+- [Daniel Arellano](https://www.linkedin.com/in/danielarellano99/)🖖 (creator)
