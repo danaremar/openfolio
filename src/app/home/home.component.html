@@ -17,9 +17,7 @@
 
                 @if (profile.shakeHand) {
                 <span class="wave-emoji d-flex">
-                    <img alt="👋" draggable="false" class="mb-2"
-                        src="assets/hand.svg"
-                        style="height: 1em;">
+                    <img alt="👋" draggable="false" class="mb-2" src="assets/hand.svg" style="height: 1em;">
                 </span>
                 }
 
@@ -32,13 +30,27 @@
             @else if (profile.role.length>1) {
             <app-typed-text [list]="profile.role" class="fs-3 fw-bold fst-italic color-secundary"></app-typed-text>
             }
+
+            <!-- DESCRIPTION -->
             <div class="fs-5 mt-3 mb-3" *ngIf="profile.description">{{profile.description}}</div>
+
+            <!-- LOCATION -->
+            @if (profile.location) {
+            <div class="d-flex flex-wrap text-muted mb-2">
+                <i class="bi bi-geo-alt-fill me-3 fs-3"></i>
+                <div class="my-auto fs-5 me-3">{{profile.location}}</div>
+                @if (profile.locationFlag) {
+                <img class="my-auto" src="assets/{{profile.locationFlag}}" alt="country" height="25px" width="25px">
+
+                }
+            </div>
+            }
 
             <!-- FAST CONTACTS -->
             @if (profile.fastContacts && contacts.length>1) {
             <div class="d-flex mb-3">
                 @for (c of contacts; track $index) {
-                <a class="contact-icon" href="{{c.link}}" aria-label="contact link" target="_blank" >
+                <a class="contact-icon" href="{{c.link}}" aria-label="contact link" target="_blank">
                     <i class="{{c.icon}} fs-3 me-4"></i>
                 </a>
                 }

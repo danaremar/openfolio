@@ -9,6 +9,8 @@ export const configEn = {
         shakeHand: true,
         fastContacts: true,
         description: "Dedicated Software Engineer with a focus on efficient project management. Demonstrates strong performance in delivering high-quality solutions. Combines technical expertise with excellent interpersonal skills, fostering a collaborative and social work environment.",
+        location: "Seville, Spain",
+        locationFlag: "flags/es.svg"
     }, 
     qualifications: [
         {

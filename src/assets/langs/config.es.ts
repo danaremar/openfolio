@@ -9,6 +9,8 @@ export const configEs = {
         shakeHand: true,
         fastContacts: true,
         description: "Ingeniero de software dedicado a la gestión eficaz de proyectos. Demuestra un sólido rendimiento en la entrega de soluciones de alta calidad. Combina conocimientos técnicos con excelentes habilidades interpersonales, fomentando un entorno de trabajo colaborativo y social.",
+        location: "Sevilla, España",
+        locationFlag: "flags/es.svg"
     }, 
     qualifications: [
         {
