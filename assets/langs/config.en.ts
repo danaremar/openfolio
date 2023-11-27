@@ -8,7 +8,9 @@ export const configEn = {
         ],
         shakeHand: true,
         fastContacts: true,
-        description: "Dedicated Software Engineer with a focus on efficient project management. Demonstrates strong performance in delivering high-quality solutions. Combines technical expertise with excellent interpersonal skills, fostering a collaborative and social work environment.",
+        description: "Software Engineer with solid knowledge in software development, team management and cybersecurity. Recognized for my problem solving approach and dedication to work, being efficiency and quality my main focuses. I develop products in my spare time and I am looking to develop my expertise in software project management.",
+        location: "Seville, Spain",
+        locationFlag: "flags/es.svg"
     }, 
     qualifications: [
         {
