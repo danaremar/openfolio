@@ -25,6 +25,11 @@
 
 <div class="container">
   <div class="row">
+    @if (features.skills) {
+      <app-section path="skills" [name]="'SKILLS' | translate">
+        <app-skills></app-skills>
+      </app-section>
+      }
     @if (features.qualification) {
     <app-section path="qualification" [name]="'QUALIFICATION' | translate" class="col-lg-6">
       <app-qualification></app-qualification>
@@ -33,11 +38,6 @@
     @if (features.experience) {
     <app-section path="experience" [name]="'EXPERIENCE' | translate" class="col-lg-6">
       <app-experience></app-experience>
-    </app-section>
-    }
-    @if (features.skills) {
-    <app-section path="skills" [name]="'SKILLS' | translate">
-      <app-skills></app-skills>
     </app-section>
     }
     @if (features.products) {

@@ -8,7 +8,7 @@ export const configEs = {
         ],
         shakeHand: true,
         fastContacts: true,
-        description: "Ingeniero de software dedicado a la gestión eficaz de proyectos. Demuestra un sólido rendimiento en la entrega de soluciones de alta calidad. Combina conocimientos técnicos con excelentes habilidades interpersonales, fomentando un entorno de trabajo colaborativo y social.",
+        description: "Ingeniero de Software con sólidos conocimientos en desarrollo software, gestión de equipos y ciberseguridad. Reconocido por mi enfoque resolutivo y dedicación al trabajo, siendo mis principales enfoques la eficiencia y la calidad. Desarrollo productos en mi tiempo libre y busco especializarme en la gestión de proyectos software.",
         location: "Sevilla, España",
         locationFlag: "flags/es.svg"
     }, 

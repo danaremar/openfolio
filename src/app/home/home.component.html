@@ -38,10 +38,10 @@
             @if (profile.location) {
             <div class="d-flex flex-wrap text-muted mb-2">
                 <i class="bi bi-geo-alt-fill me-3 fs-3"></i>
-                <div class="my-auto fs-5 me-3">{{profile.location}}</div>
-                @if (profile.locationFlag) {
-                <img class="my-auto" src="assets/{{profile.locationFlag}}" alt="country" height="25px" width="25px">
+                <div class="my-auto fs-5 me-2">{{profile.location}}</div>
 
+                @if (profile.locationFlag!="") {
+                <img class="my-auto" src="assets/{{profile.locationFlag}}" alt="country" height="20px" width="20px">
                 }
             </div>
             }

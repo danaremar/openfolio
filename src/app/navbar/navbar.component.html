@@ -15,6 +15,11 @@
           <a class="nav-link" href="#">{{'ABOUTME' | translate}}</a>
         </li>
         }
+        @if (features.skills) {
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">{{'SKILLS' | translate}}</a>
+        </li>
+        }
         @if (features.qualification) {
         <li class="nav-item">
           <a class="nav-link" href="#qualification">{{'QUALIFICATION' | translate}}</a>
@@ -23,11 +28,6 @@
         @if (features.experience) {
         <li class="nav-item">
           <a class="nav-link" href="#experience">{{'EXPERIENCE' | translate}}</a>
-        </li>
-        }
-        @if (features.skills) {
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">{{'SKILLS' | translate}}</a>
         </li>
         }
         @if (features.products) {
@@ -64,7 +64,8 @@
             </div>
             <ul class="dropdown-menu">
               @for (l of languages.list; track $index) {
-              <li class="me-3 d-flex dropdown-item{{l==selectedLanguage?' active':''}}" role="button" (click)="changeLanguage(l)">
+              <li class="me-3 d-flex dropdown-item{{l==selectedLanguage?' active':''}}" role="button"
+                (click)="changeLanguage(l)">
                 @if (languages.showFlag) {
                 <img class="flag me-2 my-auto" src="assets/flags/{{l}}.svg" alt="profile logo" width="35px"
                   height="35px" loading="lazy">
