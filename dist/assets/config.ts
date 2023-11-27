@@ -37,6 +37,12 @@ export const contacts = [
         link: "https://www.linkedin.com/in/danielarellano99/"
     },
     {
+        platform: "Buy me a coffee",
+        info: "@daniarellano",
+        icon: "bi bi-cup-hot",
+        link: "https://www.buymeacoffee.com/daniarellano"
+    },
+    {
         platform: "Telegram",
         info: "daniarellano99",
         icon: "bi bi-telegram",
