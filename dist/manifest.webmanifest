@@ -1,11 +1,10 @@
 {
-  "id": "/openfolio/",
-  "name": "danaremar",
-  "short_name": "danaremar",
+  "name": "openfolio",
+  "short_name": "openfolio",
   "theme_color": "#000000",
   "background_color": "#0f0f0f",
   "display": "standalone",
-  "scope": "/openfolio/",
+  "scope": "./",
   "start_url": "/openfolio/",
   "icons": [
     {
