@@ -222,9 +222,9 @@ export const configEs = {
             name: "AGIX",
             description: [
                 "Solución de gestión de proyectos todo en uno, diseñada para agilizar el flujo de trabajo y aumentar la productividad. Con funciones como gestión de sprints, tareas, kanban, gantt, seguimiento del tiempo y estimaciones.",
-                "Sistema basado en una arquitectura de microservicios, incorpora una API Gateway y funciona como una aplicación de una sola página. Hay varios planes disponibles, cada uno con características, tarifas y cuotas distintas. La seguridad se implementa utilizando el estándar JWT con tokens de reclamaciones.",
+                // "Sistema basado en una arquitectura de microservicios, incorpora una API Gateway y funciona como una aplicación de una sola página. Hay varios planes disponibles, cada uno con características, tarifas y cuotas distintas. La seguridad se implementa utilizando el estándar JWT con tokens de reclamaciones.",
             ],
-            secondary: "Angular + Bootstrap + Spring Boot (Java + Gradle) + MongoDB + MariaDB",
+            tags: ["Angular", "Bootstrap", "Spring Boot (Java + Gradle)", "MongoDB", "MariaDB"],
             images: [
                 "products/agix/03.jpg",
                 "products/agix/04.jpg",
@@ -232,7 +232,7 @@ export const configEs = {
                 "products/agix/06.jpg",
                 "products/agix/01.jpg",
                 "products/agix/02.jpg",
-                "products/agix/agix-kanban.png",
+                "products/agix/agix-kanban.jpg",
             ],
             sources: [
                 {
@@ -253,10 +253,10 @@ export const configEs = {
             name: "Openfolio",
             description: [
                 "Portafolio personal de código abierto usando Angular y Bootstrap, que es fácilmente configurable en un solo archivo.",
-                "Incluye temas claros y oscuros, con un diseño minimalista y adaptable.",
-                "Se ha construido como un proyecto de código abierto, dando la oportunidad a los individuos de crear también sus propias instancias. ¡Visítelo en GitHub!"
+                // "Incluye temas claros y oscuros, con un diseño minimalista y adaptable.",
+                // "Se ha construido como un proyecto de código abierto, dando la oportunidad a los individuos de crear también sus propias instancias. ¡Visítelo en GitHub!"
             ],
-            secondary: "Angular + Bootstrap",
+            tags: ["Angular", "Bootstrap"],
             images: [
                 "products/portfolio/01.jpg",
                 "products/portfolio/02.jpg",
@@ -284,9 +284,10 @@ export const configEs = {
             name: "Taxi trip",
             description: [
                 "Análisis mediante IA de los datos de los taxis de Nueva York implica examinar distancias, precios y duración de los trayectos.",
-                "El objetivo principal es aplicar varios algoritmos de agrupación para discernir patrones e identificar agrupaciones basadas en la duración y la distancia del viaje."
+                // "El objetivo principal es aplicar varios algoritmos de agrupación para discernir patrones e identificar agrupaciones basadas en la duración y la distancia del viaje."
             ],
             secondary: "R (Caret + dbscan + ggplot2)",
+            stack: ["R", "caret", "dbscan", "ggplot"],
             images: [
                 "products/taxi/clusters.png",
                 "products/taxi/clusters-2NN.png",
@@ -311,9 +312,9 @@ export const configEs = {
             name: "Juego calculadora",
             description: [
                 "Juego de mejora de la respuesta mental se ha desarrollado para mejorar las capacidades cognitivas mediante sencillos cálculos matemáticos.",
-                "Diseñado con Android Studio específicamente para dispositivos Android, con temas claros y oscuros."
+                // "Diseñado con Android Studio específicamente para dispositivos Android, con temas claros y oscuros."
             ],
-            secondary: "Android Studio + Gradle + Material",
+            tags: ["Android Studio", "Gradle", "Material"],
             images: [
                 "products/calc-game/calc_game_04.jpg",
                 "products/calc-game/calc_game_01.jpg",
