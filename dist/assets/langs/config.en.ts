@@ -10,7 +10,7 @@ export const configEn = {
         fastContacts: true,
         description: "Software Engineer with solid knowledge in software development, team management and cybersecurity. Recognized for my problem solving approach and dedication to work, being efficiency and quality my main focuses. I develop products in my spare time and I am looking to develop my expertise in software project management.",
         location: "Seville, Spain",
-        locationFlag: "flags/es.svg"
+        locationFlag: "flags/es.png"
     }, 
     qualifications: [
         {
@@ -222,9 +222,9 @@ export const configEn = {
             name: "AGIX",
             description: [
                 "All-in-one project management solution, designed to streamline your workflow and boost productivity. With features like sprint management, tasks, kanban, gantt, time tracker and estimations.",
-                "The system is built on a microservices architecture, incorporating an API Gateway, and operates as a single-page application. Various plans are available, each offering distinct features, rates, and quotas. Security is implemented using the JWT standard with claims tokens.",
+                // "The system is built on a microservices architecture, incorporating an API Gateway, and operates as a single-page application. Various plans are available, each offering distinct features, rates, and quotas. Security is implemented using the JWT standard with claims tokens.",
             ],
-            secondary: "Angular + Bootstrap + Spring Boot (Java + Gradle) + MongoDB + MariaDB",
+            tags: ["Angular", "Bootstrap", "Spring Boot (Java + Gradle)", "MongoDB", "MariaDB"],
             images: [
                 "products/agix/03.jpg",
                 "products/agix/04.jpg",
@@ -232,7 +232,7 @@ export const configEn = {
                 "products/agix/06.jpg",
                 "products/agix/01.jpg",
                 "products/agix/02.jpg",
-                "products/agix/agix-kanban.png",
+                "products/agix/agix-kanban.jpg"
             ],
             sources: [
                 {
@@ -253,10 +253,10 @@ export const configEn = {
             name: "Openfolio",
             description: [
                 "Open-source personal portfolio using Angular and Bootstrap, easily configurable with just one file.",
-                "The portfolio features both dark and light themes, boasting a responsive and minimalist design.",
-                "It has been constructed as an open-source project, providing the opportunity for individuals to create their own instances as well. Check it out on GitHub!"
+                // "The portfolio features both dark and light themes, boasting a responsive and minimalist design.",
+                // "It has been constructed as an open-source project, providing the opportunity for individuals to create their own instances as well. Check it out on GitHub!"
             ],
-            secondary: "Angular + Bootstrap",
+            tags: ["Angular", "Bootstrap"],
             images: [
                 "products/portfolio/01.jpg",
                 "products/portfolio/02.jpg",
@@ -284,9 +284,9 @@ export const configEn = {
             name: "Taxi trip",
             description: [
                 "Conducting AI analysis on New York taxi data involves examining distances, prices, and trip durations.",
-                "The primary objective is to apply various clustering algorithms to discern patterns and identify clusters based on trip duration and distance."
+                // "The primary objective is to apply various clustering algorithms to discern patterns and identify clusters based on trip duration and distance."
             ],
-            secondary: "R (Caret + dbscan + ggplot2)",
+            tags: ["R", "caret", "dbscan", "ggplot"],
             images: [
                 "products/taxi/clusters.png",
                 "products/taxi/clusters-2NN.png",
@@ -311,9 +311,9 @@ export const configEn = {
             name: "Calc game",
             description: [
                 "Mental response improvement game has been developed to enhance cognitive abilities through simple mathematical calculations",
-                "Designed using Android Studio specifically for Android devices, featuring both light and dark themes"
+                // "Designed using Android Studio specifically for Android devices, featuring both light and dark themes"
             ],
-            secondary: "Android Studio + Gradle + Material",
+            tags: ["Android Studio", "Gradle", "Material"],
             images: [
                 "products/calc-game/calc_game_04.jpg",
                 "products/calc-game/calc_game_01.jpg",
