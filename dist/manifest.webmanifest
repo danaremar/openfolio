@@ -5,7 +5,7 @@
   "background_color": "#0f0f0f",
   "display": "standalone",
   "scope": "./",
-  "start_url": "./",
+  "start_url": "/openfolio/index.html",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
