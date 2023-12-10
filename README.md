@@ -219,7 +219,7 @@ Configutation files for each language. It's located in *`src/assets/langs`* with
 					"It has been constructed as an open-source project, providing the opportunity for individuals to create their own instances as well. Check it out on GitHub!",
 					...
 				],
-				secondary: "Angular + Bootstrap",
+				tags: ["Angular", "Bootstrap"],
 				images: [
 					"products/openfolio/03.jpg",
 					"products/openfolio/04.jpg",
