@@ -4,8 +4,8 @@
   "theme_color": "#000000",
   "background_color": "#0f0f0f",
   "display": "standalone",
-  "scope": "./openfolio",
-  "start_url": "./openfolio",
+  "scope": "/openfolio/",
+  "start_url": "/openfolio/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
